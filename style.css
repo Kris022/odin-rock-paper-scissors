@@ -1,3 +1,28 @@
+:root {
+    --bg-color: #03001C;
+}
+
 body {
-    
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: darkgray;
+}
+
+.page-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    min-width: 24rem;
+}
+
+button {
+    padding: 1rem 2rem;
+    cursor: pointer;
 }
