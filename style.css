@@ -1,5 +1,6 @@
 :root {
-    --bg-color: #03001C;
+    --bg-color: #292931;
+    --button: #121216;
     --dark-highlight: #301E67;
     --highlight: #810CA8;
     --text: #E0E0E0;
@@ -10,6 +11,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: var(--bg-color);
+  color: var(--text);
 }
 
 .page-container {
@@ -26,6 +28,17 @@ section {
 }
 
 button {
+    background-color: var(--button);
+    color: var(--text);
+    max-width: 150px;
+    font-size: 1.25rem;
     padding: 1rem 2rem;
     cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: border-color .18s;
+}
+
+button:hover {
+    border-color: var(--highlight);
 }
