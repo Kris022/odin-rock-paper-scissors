@@ -39,7 +39,6 @@ function play() {
   let playerScore = 0;
   let computerScore = 0;
 
-  // for (let index = 0; index < 5; index++) {
   console.log("Round", index + 1);
   let playerSelection = prompt("Enter your choice: ");
   let computerSelection = getComputerChoice();
@@ -72,7 +71,6 @@ function play() {
   }
   console.log(" ");
 
-  // }
 
   console.log("Player Score: ", playerScore);
   console.log("Computer Score: ", computerScore);
