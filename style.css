@@ -1,12 +1,15 @@
 :root {
     --bg-color: #03001C;
+    --dark-highlight: #301E67;
+    --highlight: #810CA8;
+    --text: #E0E0E0;
 }
 
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: darkgray;
+  background-color: var(--bg-color);
 }
 
 .page-container {
