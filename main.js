@@ -35,16 +35,23 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-function play() {
-  let playerScore = 0;
-  let computerScore = 0;
+const scoreDiv = document.querySelector(".scoreDiv");
+let playerScore = 0;
+let computerScore = 0;
 
-  console.log("Round", index + 1);
-  let playerSelection = prompt("Enter your choice: ");
+// ui element indicating action chosen by player and computer
+const choiceDiv = document.querySelector(".choiceDiv");
+
+const resultsDiv = document.querySelector('.resultsDiv');
+
+function play(playerSelection) {
+  // console.log("Round", index + 1);
+  // let playerSelection = prompt("Enter your choice: ");
   let computerSelection = getComputerChoice();
 
-  console.log("Player choice: ", playerSelection);
-  console.log("Computer choice: ", computerSelection);
+  // console.log("Player choice: ", playerSelection);
+  // console.log("Computer choice: ", computerSelection);
+  choiceDiv.innerHTML = `<h3>You: ${playerSelection}</h3> <h3>Comp: ${computerSelection}</h3>`;
 
   const results = playRound(playerSelection, computerSelection);
 
@@ -71,7 +78,17 @@ function play() {
   }
   console.log(" ");
 
-
-  console.log("Player Score: ", playerScore);
-  console.log("Computer Score: ", computerScore);
+  // console.log("Player Score: ", playerScore);
+  // console.log("Computer Score: ", computerScore);
+  scoreDiv.innerHTML = `<h3>You: ${playerScore}</h3> <h3>Comp: ${computerScore}</h3>`;
 }
+
+// Get player action buttons as a node list
+const actionButtons = document.querySelectorAll(".playerActionBtn");
+
+//
+actionButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    play(button.innerText);
+  });
+});
